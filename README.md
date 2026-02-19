@@ -6,19 +6,25 @@ Local voice-to-text for macOS. Hold Tab, speak, release — transcribed text is 
 
 ## How it works
 
-1. **Hold Tab** — recording starts, a floating overlay shows a pulsing red dot
-2. **Speak** — live streaming transcription appears in the overlay as you talk
-3. **Release Tab** — final transcription runs and text is pasted at your cursor
+1. **Hold Tab** — recording starts, overlay appears with a pulsing red dot
+
+   <img src="assets/recording.png" alt="Recording state" width="500">
+
+2. **Speak** — live streaming transcription appears as you talk
+
+   <img src="assets/streaming.png" alt="Streaming transcription" width="500">
+
+3. **Release Tab** — final transcription runs with the full model
+
+   <img src="assets/transcribing.png" alt="Transcribing state" width="500">
+
+4. **Done** — accurate text is inserted at your cursor
+
+   <img src="assets/result.png" alt="Result state" width="500">
 
 Uses [faster-whisper](https://github.com/SYSTRAN/faster-whisper) (CTranslate2) for fast local inference. Dual-model approach: `tiny` model for real-time streaming preview, `base` (or larger) model for accurate final transcription.
 
 **Everything runs locally. No API calls. No data leaves your machine.**
-
-## Demo
-
-<p align="center">
-  <img src="assets/demo.gif" alt="Whisper Flow demo" width="600">
-</p>
 
 ## Install
 
